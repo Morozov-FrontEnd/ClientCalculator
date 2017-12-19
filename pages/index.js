@@ -1,23 +1,14 @@
 import React from "react";
 import ReactDom from "react-dom";
-import { Provider } from 'react-redux';
-import { createStore } from 'redux';
 
-import MyModule from "../components/MyModule";
-
-import reducer from "../reducers" 
-
-const store = createStore(reducer);
+import MainApp from "../components/MainApp";
 
 const App = () => (
-    
-    <Provider store={store}>
-        <MyModule>
-            <div>
-                Test2
-            </div>
-        </MyModule>
-    </Provider>
+    <MainApp>
+        <div>
+            Test2
+        </div>
+    </MainApp>
 )
 
 export default App;
