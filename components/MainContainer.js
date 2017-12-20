@@ -17,24 +17,27 @@ const addState = (props) =>{
     inputVal.value = '';
 };
 
-MainContainer.getInitialProps = () => {
-  // const res = await fetch('')
-  // const json = await res.json()
-  // return { states: json.stargazers_count }
-  return { test: '1' }
-}
-
-
 const MainContainer = (props) => (
   <div>
+    {console.log(props.url.query)}
     MainContainer
     <PostLink title="1"/>
     <PostLink title="2"/>
     <PostLink title="3"/>
-    {console.log(props)}
     <h1></h1>
 
   </div>
 )
+
+
+// MainContainer.getInitialProps = () => {
+//   const res = await fetch('')
+//   const json = await res.json()
+//   return { states: json.stargazers_count }
+// }
+
+MainContainer.defaultProps = {
+   test: '1',
+};
 
 export default MainContainer;
