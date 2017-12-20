@@ -19,12 +19,15 @@ const addState = (props) =>{
 
 const MainContainer = (props) => (
   <div>
-    {console.log(props.url.query)}
     MainContainer
     <PostLink title="1"/>
     <PostLink title="2"/>
     <PostLink title="3"/>
-    <h1></h1>
+    <h1>{
+      (props.url.query.title)
+      ? props.url.query.title
+      : '1'
+    }</h1>
 
   </div>
 )
