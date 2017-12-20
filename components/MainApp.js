@@ -6,7 +6,7 @@ import MainContainer from './MainContainer';
 
 const MainApp = (props) => [
     <Header/>,
-    <MainContainer/>,
+    <MainContainer url={props.url}/>,
     <Footer/>
 ]
 
