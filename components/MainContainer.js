@@ -1,5 +1,7 @@
 import Link from 'next/link'
 
+import Steps from './Steps';
+
 // let inputVal;
 
 const addState = (props) =>{
@@ -7,27 +9,27 @@ const addState = (props) =>{
       // props.onAddState(props.step);
   };
   
-  const PostLink = (props) => (
-    <li onClick={addState} title={props.title}>
-      <Link href={`/steps/step${props.title}`}>
-        <a>{props.title}</a>
-      </Link>
-    </li>
-  )
+//ToDo: make normal content grab 
+
+const PostLink = (props) => (
+  <li onClick={addState} title={props.title}>
+    <Link href={`/steps/?title=${props.title}`}>
+      <a>{props.title}</a>
+    </Link>
+  </li>
+)
 
 const MainContainer = (props) => (
   <div>
     MainContainer
-    <PostLink title="1"/>
-    <PostLink title="2"/>
-    <PostLink title="3"/>
-    <h1>{
-      (props.url.query.title)
-      ? props.url.query.title
-      : '1'
-    }</h1>
-
-    {props.children}
+    {if(props.steps)}
+      <PostLink title="1"/>
+      <PostLink title="2"/>
+      <PostLink title="3"/>
+      <h1>{props.url.query.title}</h1>
+        <Steps id={props.url.query.title}/>
+      {props.children}
+    {endif}
   </div>
 )
 
