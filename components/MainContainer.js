@@ -2,14 +2,13 @@ import Link from 'next/link'
 
 // let inputVal;
 
-// const addState = (props) =>{
-//       console.log('Add', inputVal.value);
-//       props.onAddState(inputVal.value);
-//       inputVal.value = '';
-//   };
+const addState = (props) =>{
+      console.log('Add', props);
+      // props.onAddState(props.step);
+  };
   
   const PostLink = (props) => (
-    <li>
+    <li onClick={addState} title={props.title}>
       <Link href={`/steps?title=${props.title}`}>
         <a>{props.title}</a>
       </Link>
@@ -35,7 +34,6 @@ const MainContainer = (props) => (
 //   const res = await fetch('')
 //   const json = await res.json()
 //   return { states: json.stargazers_count }
-//   return { test: '1' }
 // }
 
 export default MainContainer;
