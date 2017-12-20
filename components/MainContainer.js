@@ -19,19 +19,29 @@ const PostLink = (props) => (
   </li>
 )
 
-const MainContainer = (props) => (
-  <div>
-    MainContainer
-    {if(props.steps)}
-      <PostLink title="1"/>
-      <PostLink title="2"/>
-      <PostLink title="3"/>
-      <h1>{props.url.query.title}</h1>
-        <Steps id={props.url.query.title}/>
-      {props.children}
-    {endif}
-  </div>
-)
+const MainContainer = (props) => {
+  
+  if(props.steps){
+    return(
+      <div>
+        Steps
+        <PostLink title="1"/>
+        <PostLink title="2"/>
+        <PostLink title="3"/>
+        <h1>{props.url.query.title}</h1>
+          <Steps id={props.url.query.title}/>
+        {props.children}
+      </div>
+    )
+  }
+  else{
+    return(
+      <div>
+        MainContainer
+      </div>
+    )
+  }
+}
 
 // MainContainer.getInitialProps = () => {
 //   const res = await fetch('')
