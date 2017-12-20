@@ -31,16 +31,11 @@ const MainContainer = (props) => (
     <PostLink title="1"/>
     <PostLink title="2"/>
     <PostLink title="3"/>
-<<<<<<< HEAD
-    {console.log(props)}
-    <h1></h1>
-=======
     <h1>{
       (props.url.query.title)
       ? props.url.query.title
       : '1'
     }</h1>
->>>>>>> 528bf6b... Steps structure
 
   </div>
 )
