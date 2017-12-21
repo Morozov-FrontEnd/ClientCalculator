@@ -1,7 +1,7 @@
 const Header = () =>{
   return (
   <header>
-    Header
+    <img src="../src/img/logo.png"/>
   </header>);
 }
 

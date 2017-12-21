@@ -1,5 +1,8 @@
 const Authorize = (props) => {
-    
+    <div>
+      <input type="text" id="name"/> 
+      <input type="text" id="password"/> 
+    </div>
 }
 
 // Authorize.getInitialProps = () => {

@@ -13,7 +13,7 @@ const addState = (props) =>{
 
 const PostLink = (props) => (
   <li onClick={addState} title={props.title}>
-    <Link href={`/steps/?title=${props.title}`}>
+    <Link href={`/steps?title=${props.title}`}>
       <a>{props.title}</a>
     </Link>
   </li>
