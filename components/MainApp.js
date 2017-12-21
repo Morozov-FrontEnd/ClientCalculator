@@ -1,12 +1,13 @@
 import Header from './Header'
 import Footer from './Footer'
+import styles from './style.css';
 
 import MainContainer from './MainContainer';
 
 
 const MainApp = (props) => [
     <Header/>,
-    <MainContainer url={props.url} steps={props.steps}>
+    <MainContainer url={props.url}>
         {props.children}
     </MainContainer>,
     <Footer/>

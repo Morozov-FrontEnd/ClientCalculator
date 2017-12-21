@@ -12,35 +12,25 @@ const addState = (props) =>{
 //ToDo: make normal content grab 
 
 const PostLink = (props) => (
-  <li onClick={addState} title={props.title}>
-    <Link href={`/steps?title=${props.title}`}>
-      <a>{props.title}</a>
+  <li onClick={addState} step={props.step} id={props.step}>
+    <Link href={`/?step=${props.step}`}>
+      <a>{props.step}</a>
     </Link>
   </li>
 )
 
 const MainContainer = (props) => {
-  
-  if(props.steps){
     return(
       <div>
         Steps
-        <PostLink title="1"/>
-        <PostLink title="2"/>
-        <PostLink title="3"/>
-        <h1>{props.url.query.title}</h1>
-          <Steps id={props.url.query.title}/>
+        <PostLink step="1"/>
+        <PostLink step="2"/>
+        <PostLink step="3"/>
+        <h1>{props.url.query.step}</h1>
+          <Steps id={props.url.query.step}/>
         {props.children}
       </div>
     )
-  }
-  else{
-    return(
-      <div>
-        MainContainer
-      </div>
-    )
-  }
 }
 
 // MainContainer.getInitialProps = () => {
