@@ -5,10 +5,10 @@ import Steps from './Steps';
 // let inputVal;
 
 const addState = (props) =>{
-      console.log('Add', props);
-      // props.onAddState(props.step);
-  };
-  
+    console.log('Add', props);
+    // props.onAddState(props.step);
+};
+
 //ToDo: make normal content grab 
 
 const PostLink = (props) => (
