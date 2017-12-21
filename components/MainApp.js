@@ -1,6 +1,5 @@
 import Header from './Header'
 import Footer from './Footer'
-import styles from './style.css';
 
 import MainContainer from './MainContainer';
 

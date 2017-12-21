@@ -3,9 +3,11 @@ import ReactDom from "react-dom";
 // import style from './style.css';
 
 import MainApp from "../components/MainApp";
+import GlobalStyles from "../components/GlobalStyles"
 
-const App = (props) => (
+const App = (props) => [
+    <GlobalStyles/>,
     <MainApp url={props.url}/>
-)
+]
 
 export default App;
