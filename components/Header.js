@@ -1,7 +1,14 @@
+import styled from 'styled-components';
+
+const HeaderLine = styled.header`
+  display: block;
+  background: red;
+`;
+
 const Header = () =>(
-  <header>
+  <HeaderLine>
     <img src="/static/img/logo.png"/>
-  </header>
+  </HeaderLine>
 )
 
 export default Header

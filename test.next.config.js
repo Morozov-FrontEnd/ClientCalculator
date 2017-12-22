@@ -18,7 +18,7 @@ module.exports = {
       }
     ,
       {
-        test: /\.less$/,
+        test: /\.s(a|c)ss$/,
         use: ['babel-loader', 'raw-loader', 'postcss-loader',
           { loader: 'sass-loader',
             options: {
